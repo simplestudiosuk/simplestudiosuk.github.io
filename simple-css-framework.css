@@ -440,8 +440,24 @@ section{
 }
 section div{
 	flex: 1 0 calc(25% - var(--single-line));
-	padding:0px;
+	padding:var(--single-line) 0px;
 	min-width:300px;
+}
+figure{
+	max-width:100%;
+	margin-bottom:var(--single-line);
+	border-bottom:1px solid var(--light-neutral);
+}
+figure img{
+	display:block;
+	max-width:100%;
+	height:auto;
+}
+figure figcaption{
+	display:block;
+	color:var(--primary-alt-colour);
+	font-style:italic;
+	line-height:var(--double-line);
 }
 /*
 	7. Menus
