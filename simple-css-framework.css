@@ -433,15 +433,15 @@ input.button{
 */
 section{
 	width:100%;
-	padding:0 1rem;
+	padding:0 var(--single-line);
 	display:flex;
 	flex-wrap:wrap;
 	align-content:space-around;
 }
 section div{
-	flex: 1 0 calc(25% - 10px);
-	padding:1rem;
-	min-width:360px;
+	flex: 1 0 calc(25% - var(--single-line));
+	padding:var(--single-line);
+	min-width:320px;
 }
 /*
 	7. Menus
