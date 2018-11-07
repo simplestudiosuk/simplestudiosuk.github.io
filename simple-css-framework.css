@@ -99,7 +99,7 @@ table {
 	--alert-error-alt: #ffcaca;
 	--alert-warning: #ddb300;
 	--alert-warning-alt: #fff0b0;
-	--default-radius: 2px;
+	--default-radius: 8px;
 	--half-line: 0.7rem;
 	--single-line: 1.4rem;
 	--double-line: 2.8rem;
@@ -144,14 +144,14 @@ h4,h5,h6{
 	color:var(--primary-colour-alt);
 }
 p{
-	margin-bottom:12px;
+	margin-bottom:var(--single-line);
 	max-width:60em;
 	color:var(--primary-colour);
 	line-height:var(--single-line);
 	margin-bottom:var(--single-line);
 }
 ul{
-	margin-bottom:12px;
+	margin-bottom:var(--single-line);
 	list-style:none;
 	color: var(--primary-colour);
 	margin-left:4em;
@@ -164,7 +164,7 @@ ul li::before{
 	margin-left: -1em
 }
 ol{
-	margin-bottom:12px;
+	margin-bottom:var(--single-line);
 	list-style:none;
 	margin-left:4em;
 }
@@ -348,6 +348,12 @@ input:focus,textarea:focus{
 	background:var(--primary-colour);
 	border:2px solid var(--primary-colour);
 	color:var(--main-bg-colour);
+}
+.button.disabled{
+	background:var(--light-neutral);
+	border:2px solid var(--light-neutral);
+	color:#999;
+	cursor:not-allowed;
 }
 .button.all-caps{
 	text-transform: uppercase;
