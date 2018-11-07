@@ -1,0 +1,442 @@
+/*
+	Simple CSS Framework is a project by simplestudios.co.uk
+	
+	It is intended as a lightweight set of styles which can provide a
+	quick starting point for responsive website development.
+	
+	We are not CSS experts, there will be errors, and it won't all be
+	written using bleeding-edge techniques - but it will be functional.
+	
+	Our aim is to build something which will help us get a head start on 
+	layout and structure as we build client websites and web applications.
+	
+	Feel free to use it as you see fit!
+	
+	License: none (public domain)
+*/
+
+/*
+	Table of Contents
+	1. CSS Reset
+	2. Global Styles
+	3. Typography
+	4. Tables
+	5. Forms and Buttons
+	6. Layout
+	7. Menus
+*/
+
+/*
+	1. CSS Reset
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+	2. Global Styles
+*/
+
+/*
+	Setup some global styles for the system - referencing fonts included in the site's head
+*/
+:root {
+	--main-bg-colour: #fff;
+	--primary-colour: #1f2d3d;
+	--primary-colour-alt: #353f4b;
+	--secondary-colour: #dc314b;
+	--secondary-colour-alt: #f15f63;
+	--light-neutral: #f1f2f2;
+	--alert-success: #75a000;
+	--alert-success-alt: #dfedb7;
+	--alert-error: #c10000;
+	--alert-error-alt: #ffcaca;
+	--alert-warning: #ddb300;
+	--alert-warning-alt: #fff0b0;
+	--default-radius: 2px;
+	--half-line: 0.7rem;
+	--single-line: 1.4rem;
+	--double-line: 2.8rem;
+	--triple-line: 4.2rem;
+}
+*{
+	box-sizing:border-box;
+	font-family:'Open Sans', sans-serif;
+}
+body{
+	font-family:'Open Sans', sans-serif;
+	font-size:1em;
+	line-height:1.45;
+	-webkit-font-smoothing: antialiased;
+	background:var(--main-bg-color);
+}
+
+/*
+	3. Typography
+*/
+
+/*
+	Styles for type - sizes, weights, margins etc. - trying to get away with as little as possible
+*/
+h1,h2,h3,h4,h5,h6{
+	font-weight:700;
+	line-height:var(--triple-line);
+	color:var(--primary-colour);
+}
+h1{
+	font-size:2.8em;
+}
+h2{
+	font-size:2.4em;
+}
+h3{
+	font-size:2.0em;
+}
+h4,h5,h6{
+	font-size:1.4em;
+	text-transform: uppercase;
+	color:var(--primary-colour-alt);
+}
+p{
+	margin-bottom:12px;
+	max-width:60em;
+	color:var(--primary-colour);
+	line-height:var(--single-line);
+	margin-bottom:var(--single-line);
+}
+ul{
+	margin-bottom:12px;
+	list-style:none;
+	color: var(--primary-colour);
+	margin-left:4em;
+}
+ul li::before{
+	content: "•"; 
+	color: var(--secondary-colour);
+	display: inline-block; 
+	width: 1em;
+	margin-left: -1em
+}
+ol{
+	margin-bottom:12px;
+	list-style:none;
+	margin-left:4em;
+}
+ol li::before {
+	content: counter(li); 
+	color: var(--secondary-colour);
+	display: inline-block; 
+	width: 1em;
+	margin-left: -1em;
+}
+ol li{
+	counter-increment: li;
+}
+a{
+	text-decoration:none;
+	color:var(--secondary-colour);
+	border-bottom:1px solid var(--secondary-colour);
+}
+a:hover{
+	color:var(--secondary-colour-alt);
+	border-bottom:1px solid var(--secondary-colour-alt);
+}
+a:focus,a:active{
+	background:lightyellow;
+}
+strong{
+	font-weight:700;
+}
+em{
+	font-style:italic;
+}
+
+/*
+	4. Tables
+*/
+table{
+	margin:calc(var(--double-line) - 1px) 0;
+	border:1px solid var(--primary-colour);
+}
+thead{
+	background:var(--primary-colour);
+}
+tr:nth-child(even){
+	background: var(--light-neutral);
+}
+th{
+	font-weight:700;
+	line-height:var(--double-line);
+	padding:0 var(--single-line);
+	text-align:left;
+	border-right:1px solid var(--primary-colour-alt);
+	color:#fff;
+}
+th:last-child{
+	border-right:none;
+}
+td{
+	line-height:var(--double-line);
+	padding:0 var(--single-line);
+	border-right:1px solid  var(--primary-colour-alt);
+}
+td:last-child{
+	border-right:none;
+}
+td.align-right{
+	text-align:right;
+}
+
+/*
+	5. Forms and Buttons
+*/
+form{
+	max-width:60em;
+}
+fieldset{
+	margin:var(--single-line) 0px;
+	padding:24px;
+	border:1px solid var(--primary-colour);
+	border-radius:var(--default-radius);
+}
+fieldset legend{
+	background: var(--main-bg-colour);
+	padding:0 var(--single-line);
+	margin-left:-var(--single-line);
+	font-weight:700;
+}
+label{
+	width:100%;
+	display:block;
+	margin-bottom:var(--single-line);
+	color: var(--primary-colour);
+}
+label span{
+	float:right;
+	font-size:80%;
+	color: var(--alert-error);
+}
+input,textarea{
+	margin-bottom:var(--double-line);
+	min-width:300px;
+	border:1px solid var(--primary-colour);
+	padding:6px;
+	font-size:1em;
+	border-radius:var(--default-radius);
+	width:100%;
+}
+textarea{
+	display:block;
+	font-size:1em;
+}
+select{
+	min-width:300px;
+	display:block;
+	margin-bottom:var(--double-line);
+}
+input:focus,textarea:focus{
+	background:lightyellow;
+}
+.button{
+	text-decoration: none;
+	background: var(--primary-colour);
+	color: var(--main-bg-colour);
+	min-width:auto;
+	padding:0 var(--single-line);
+	line-height:calc(var(--double-line) - 4px);
+	border-radius:var(--default-radius);
+	border:2px solid var(--primary-colour);
+	display:inline-block;
+	cursor:pointer;
+	margin-right:var(--double-line);
+	margin-bottom:var(--single-line);
+}
+.button.primary{
+	background: var(--primary-colour);
+	color: var(--main-bg-colour);
+}
+.button.primary.outline{
+	border:2px solid var(--primary-colour);
+	color: var(--primary-colour);
+	background:transparent;
+}
+.button.secondary{
+	background: var(--secondary-colour);
+	border:2px solid var(--secondary-colour);
+	color: var(--main-bg-colour);
+}
+.button.secondary.outline{
+	border:2px solid var(--secondary-colour);
+	color: var(--secondary-colour);
+	background:transparent;
+}
+.button.alert-success{
+	border:2px solid var(--alert-success);
+	background: var(--alert-success);
+	color: var(--main-bg-colour);
+}
+.button.alert-warning{
+	border:2px solid var(--alert-warning);
+	background: var(--alert-warning);
+	color: var(--main-bg-colour);	
+}
+.button.alert-error{
+	border:2px solid var(--alert-error);
+	background: var(--alert-error);
+	color: var(--main-bg-colour);
+}
+.button:hover{
+	background: var(--light-neutral);
+	border:2px solid var(--secondary-colour);
+	color: var(--main-primary-colour);
+}
+.button.primary.outline:hover{
+	border:2px solid var(--secondary-colour);
+	color: var(--secondary-colour);
+}
+.button.secondary.outline:hover{
+	border:2px solid var(--primary-colour);
+	color: var(--primary-colour);
+}
+.button.alert-success:hover,.button.alert-warning:hover,.button.alert-error:hover{
+	background:var(--primary-colour);
+	border:2px solid var(--primary-colour);
+	color:var(--main-bg-colour);
+}
+.button.all-caps{
+	text-transform: uppercase;
+}
+input.button{
+	margin-bottom:0px;
+	width:auto;
+}
+.button.smaller{
+	font-size:90%;
+	padding:8px 16px;
+}
+.button.smallest{
+	font-size:80%;
+	padding:6px 12px;
+}
+.button.bigger{
+	font-size:120%;
+	padding:12px 24px;
+}
+.button.biggest{
+	font-size:140%;
+	padding:14px 28px;
+}
+.alert{
+	border-top:2px solid var(--primary-colour);
+	border-bottom:2px solid var(--primary-colour);
+	background: var(--light-neutral);
+	padding:18px 12px;
+	width:100%;
+	font-weight:700;
+}
+.alert span{
+	float:right;
+	display:inline-block;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.4em;
+	text-align:center;
+	font-weight:700;
+	border-radius:50%;
+	background:rgba(255,255,255,0.6);
+	cursor:pointer;
+}
+.alert.success{
+	border-top:2px solid var(--alert-success);
+	border-bottom:2px solid var(--alert-success);
+	background:var(--alert-success-alt);
+	color:var(--alert-success);	
+}
+.alert.success span:hover{
+	color:#fff;
+	background:var(--alert-success);	
+}
+.alert.warning{
+	border-top:2px solid var(--alert-warning);
+	border-bottom:2px solid var(--alert-warning);
+	background:var(--alert-warning-alt);
+	color:var(--alert-warning);	
+}
+.alert.warning span:hover{
+	color:#fff;
+	background:var(--alert-warning);	
+}
+.alert.error{
+	border-top:2px solid var(--alert-error);
+	border-bottom:2px solid var(--alert-error);
+	background:var(--alert-error-alt);
+	color:var(--alert-error);
+}
+.alert.error span:hover{
+	color:#fff;
+	background:var(--alert-error);
+}
+/*
+	6. Layout
+*/
+section{
+	width:100%;
+	padding:0 1rem;
+	display:flex;
+	flex-wrap:wrap;
+	align-content:space-around;
+}
+section div{
+	flex: 1 0 calc(25% - 10px);
+	padding:1rem;
+	min-width:360px;
+}
+/*
+	7. Menus
+*/
