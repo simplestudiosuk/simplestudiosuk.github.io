@@ -6,76 +6,115 @@
 	<title>Simple Studios</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet"> 
 	<link href="simple-css-framework.css" rel="stylesheet" />
+	<style>
+		img.logo{
+			max-width:120px;
+			height:auto;
+			margin-bottom:var(--single-line);
+		}	
+	</style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 </head>
 <body>
-	<section>
-		<div>
-			<p class="alert warning">This site is a work in progress - some of it is unfinished and/or likely to be broken! <a href="#more">More</a></p>
-			<h1>Simple Studios</h1>
-			<p><strong>Technology should be enhancing our lives and increasing productivity. We're here to help make that happen.</strong></p>
-			<ul>
-				<li>We build fast and easy to use websites, <a href="http://whitbysurf.co.uk" target="_blank">like this</a> and <a href="https://spicule.co.uk" target="_blank">this</a>.</li>
-				<li>We also write software. <a href="#">Read this case study</a> to discover how we developed a bespoke publishing solution for the UK's largest countryside jobs advertising agency.</li>
-				<li>Or <a href="#">click here</a> to read about our work with the Yorkshire Cycle Hub - a project combining e-commerce &amp; in-store sales with accommodation &amp; cycle workshop management.</li>
-			</ul>
-			<p><a href="mailto:hello@simplestudios.co.uk" class="button outline secondary">Email Us</a></p>
+	<section class="primary">
+		<header>
+			<nav class="horizontal">
+				<ul>
+					<li><a class="button secondary smaller" href="#about">About</a></li>
+					<li><a class="button secondary smaller" href="#projects">Projects</a></li>
+					<li><a class="button secondary smaller" href="#products">Products</a></li>
+					<li><a class="button secondary smaller" href="#perch">Perch Apps</a></li>
+					<li class="push-right"><a class="button-padding" href="mailto:hello@simplestudios.co.uk?subject=Website Enquiry">Email Us</a></li>
+				</ul>
+			</nav>
+		</header>
+	</section>
+	<section class="secondary" id="about">
+		<div class="row">
+			<div>
+				<img src="images/simplestudios.svg" alt="Simple Studios" class="logo" />
+				<p><strong>Technology should be enhancing our lives and increasing productivity. Simple Studios exists to help make that happen.</strong></p>
+				<ul>
+					<li>We build fast and easy to use websites, <a href="http://whitbysurf.co.uk" target="_blank">like this</a> and <a href="https://spicule.co.uk" target="_blank">this</a>.</li>
+					<li>We also write software. <a href="#">Read this case study</a> to discover how we developed a bespoke publishing solution for the UK's largest countryside jobs advertising agency.</li>
+					<li>Or <a href="#">click here</a> to read about our work with the Yorkshire Cycle Hub - a project combining e-commerce &amp; in-store sales with accommodation &amp; cycle workshop management.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="projects">
+		<div class="row">
+			<div>
+				<p class="alert warning">This site is a work in progress - some of it is unfinished and/or likely to be broken! <a href="#more">More</a></p>
+				<h2>Projects</h2>
+			</div>
 		</div>
 	</section>
 	<section>
-		<div>
-			<h2>Projects</h2>
+		<div class="row">
+			<div>
+				<h3>Simple CSS Framework</h3>
+				<p>We wanted to build a simple CSS framework to help give us a head-start on our website and web application development projects. Having experimented with quite a few commonly used frameworks, we decided to build our own.</p>
+				<p><a class="button primary" href="https://github.com/simplestudiosuk/simple-css-framework" target="_blank">View on Github</a></p>
+			</div>
+		</div>
+	</section>
+	<section class="light-neutral" id="products">
+		<div class="row">
+			<div>
+				<h2>Products</h2>
+			</div>
+		</div>
+	</section>
+	<section class="light-neutral">
+		<div class="row">
+			<div>
+				<h3>Simple Calendar</h3>
+				<p>Our first commercial software solution - a straight forward but comprehensive accommodation availability and online booking calendar. Aimed at small bed and breakfasts or holiday cottage owners it's really simple to use.</p>
+				<p><a class="button primary" href="https://simplecalendar.co.uk" target="_blank">Visit SimpleCalendar.co.uk</a></p>
+			</div>
+		</div>
+	</section>
+	<section id="perch">
+		<div class="row">
+			<div>
+				<h2>Perch Apps</h2>
+			</div>
 		</div>
 	</section>
 	<section>
-		<div>
-			<h3>Simple CSS Framework</h3>
-			<p>We wanted to build a simple CSS framework to help give us a head-start on our website and web application development projects. Having experimented with quite a few commonly used frameworks, we decided to build our own.</p>
-			<p><a class="button primary" href="https://github.com/simplestudiosuk/simple-css-framework" target="_blank">View on Github</a></p>
+		<div class="row">
+			<div>
+				<h3>Simple Tickets</h3>
+				<p>We wanted to build a simple CSS framework to help give us a head-start on our website and web application development projects. Having experimented with quite a few commonly used frameworks, we decided to build our own.</p>
+				<p><a class="button disabled" href="#">View on Github</a></p>
+			</div>
 		</div>
 	</section>
-	<section>
-		<div>
-			<h2>Products</h2>
+	<section class="primary" id="more">
+		<div class="row">
+			<div>
+				<h4>About Us</h4>
+				<figure>
+					<img src="images/jack-esgrid.jpg" alt="Jack Barber and Esgrid Sikahall" />
+					<figcaption>Jack and Esgrid on Skiddaw in the Lake District</figcaption>
+				</figure>
+			</div>
+			<div>
+				<p class="margin-h4"><strong>Jack Barber</strong> has been a freelance website designer and developer for over 10 years. Based in Whitby, North Yorkshire, he's married to Megan and they have four children.</p>
+				<p>Originally from Guatemala, <strong>Esgrid Sikahall</strong> is married to Rachel and they live in Edinburgh. Esgrid splits his time between Simple Studios and working for his PhD at Edinburgh University.</p>
+			</div>
+			<div>
+				<h4>About This Site</h4>
+				<p>Simple Studios is a new venture for <a href="https://jackbarber.co.uk">Jack Barber Ltd</a>. We're <a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food" target="_blank">eating our own dog food</a> and building this website using our own CSS framework. As a result this site will always remain a work in progress; bits of it may be be unfinished or broken.</p>
+				<p>Our aim is to develop a design and development studio with a reputation for creating <strong>simple solutions for complex problems</strong>.</p>
+			</div>
 		</div>
-	</section>
-	<section>
-		<div>
-			<h3>Simple Calendar</h3>
-			<p>Our first commercial software solution - a straight forward but comprehensive accommodation availability and online booking calendar. Aimed at small bed and breakfasts or holiday cottage owners it's really simple to use.</p>
-			<p><a class="button primary" href="https://simplecalendar.co.uk" target="_blank">Visit SimpleCalendar.co.uk</a></p>
-		</div>
-	</section>
-	<section>
-		<div>
-			<h2>Perch Apps</h2>
-		</div>
-	</section>
-	<section>
-		<div>
-			<h3>Simple Tickets</h3>
-			<p>We wanted to build a simple CSS framework to help give us a head-start on our website and web application development projects. Having experimented with quite a few commonly used frameworks, we decided to build our own.</p>
-			<p><a class="button disabled" href="#">View on Github</a></p>
-		</div>
-	</section>
-	<section>
-		<div>
-			<h4>About Us</h4>
-			<figure>
-				<img src="images/jack-esgrid.jpg" alt="Jack Barber and Esgrid Sikahall" />
-				<figcaption>Jack and Esgrid on Skiddaw in the Lake District</figcaption>
-			</figure>
-			<p><strong>Jack Barber</strong> has been a freelance website designer and developer for over 10 years. Based in Whitby, North Yorkshire, he's married to Megan and they have four children.</p>
-			<p>Originally from Guatemala, <strong>Esgrid Sikahall</strong> is married to Rachel and they live in Edinburgh. Esgrid splits his time between Simple Studios and working for his PhD at Edinburgh University.</p>
-		</div>
-	</section>
-	<section id="more">
-		<div>
-			<h4>About This Site</h4>
-			<p>Simple Studios is a new venture for <a href="https://jackbarber.co.uk">Jack Barber Ltd</a>. We're <a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food" target="_blank">eating our own dog food</a> and building this website using our own CSS framework. As a result this site will always remain a work in progress; bits of it may be be unfinished or broken.</p>
-			<p>Our aim is to develop a design and development studio with a reputation for creating <strong>simple solutions for complex problems</strong>.</p>
-			<p>All content &copy; Jack Barber Ltd 2018</p>
+		<div class="row">
+			<div>
+				<p>All content &copy; Jack Barber Ltd 2018</p>
+			</div>
 		</div>
 	</section>
 </body>

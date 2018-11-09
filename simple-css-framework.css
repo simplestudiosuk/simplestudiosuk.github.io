@@ -99,11 +99,12 @@ table {
 	--alert-error-alt: #ffcaca;
 	--alert-warning: #ddb300;
 	--alert-warning-alt: #fff0b0;
-	--default-radius: 8px;
+	--default-radius: 2px;
 	--half-line: 0.7rem;
 	--single-line: 1.4rem;
 	--double-line: 2.8rem;
 	--triple-line: 4.2rem;
+	--max-width:1280px;
 }
 *{
 	box-sizing:border-box;
@@ -155,6 +156,10 @@ ul{
 	list-style:none;
 	color: var(--primary-colour);
 	margin-left:4em;
+	max-width:56em;
+}
+ul li{
+	max-width:56em;
 }
 ul li::before{
 	content: "•"; 
@@ -162,6 +167,9 @@ ul li::before{
 	display: inline-block; 
 	width: 1em;
 	margin-left: -1em
+}
+.secondary ul li::before{
+	color: var(--primary-colour);
 }
 ol{
 	margin-bottom:var(--single-line);
@@ -196,7 +204,18 @@ strong{
 em{
 	font-style:italic;
 }
-
+.margin-h1{
+	margin-top:calc(2.8em + var(--double-line));
+}
+.margin-h2{
+	margin-top:calc(2.4em + var(--double-line));
+}
+.margin-h3{
+	margin-top:calc(2em + var(--double-line));
+}
+.margin-h4,.margin-h5,.margin-h6{
+	margin-top:calc(1.4em + var(--double-line));
+}
 /*
 	4. Tables
 */
@@ -249,6 +268,7 @@ fieldset legend{
 	background: var(--main-bg-colour);
 	padding:0 var(--single-line);
 	margin-left:-var(--single-line);
+	color:var(--primary-colour);
 	font-weight:700;
 }
 label{
@@ -288,14 +308,14 @@ input:focus,textarea:focus{
 	background: var(--primary-colour);
 	color: var(--main-bg-colour);
 	min-width:auto;
-	padding:0 var(--single-line);
-	line-height:calc(var(--double-line) - 4px);
+	padding:var(--half-line) var(--single-line);
 	border-radius:var(--default-radius);
 	border:2px solid var(--primary-colour);
 	display:inline-block;
 	cursor:pointer;
-	margin-right:var(--double-line);
+	margin-right:var(--single-line);
 	margin-bottom:var(--single-line);
+	line-height:var(--single-line);
 }
 .button.primary{
 	background: var(--primary-colour);
@@ -433,15 +453,71 @@ input.button{
 */
 section{
 	width:100%;
-	padding:0 var(--single-line);
+}
+section.light-neutral{
+	background:var(--light-neutral);
+}
+section.primary{
+	background:var(--primary-colour);
+}
+section.secondary{
+	background:var(--secondary-colour);
+}
+section.primary h1,section.primary h2,section.primary h3,section.primary h4,section.primary h5,section.primary h6,section.primary p,section.primary ul,section,primary ol,
+section.secondary h1,section.secondary h2,section.secondary h3,section.secondary h4,section.secondary h5,section.secondary h6,section.secondary p,section.secondary ul,section.secondary ol{
+	color:#fff;
+}
+section.primary table thead{
+	background:var(--secondary-colour);
+}
+section.primary tr:nth-child(even){
+	background: var(--primary-colour-alt);
+}
+section.primary a.button:hover{
+	color:var(--secondary-colour);
+	background:var(--main-bg-colour);
+	border:2px solid var(--main-bg-colour);
+}
+section.secondary a{
+	color:var(--primary-colour);
+	border-bottom:1px solid var(--primary-colour);
+}
+section.secondary a:hover{
+	color:var(--light-neutral);
+	border-bottom:1px solid var(--light-neutral);
+}
+section.secondary a.button:hover{
+	color:var(--primary-colour);
+	background:var(--main-bg-colour);
+	border:2px solid var(--main-bg-colour);
+}
+section.secondary tr:nth-child(even){
+	background: var(--secondary-colour-alt);
+}
+section header{
+	width:100%;
+	max-width:var(--max-width);
+	margin:0 auto;
+	display:block;
 	display:flex;
 	flex-wrap:wrap;
 	align-content:space-around;
+	padding:var(--half-line);
 }
-section div{
+section div.row{
+	width:100%;
+	max-width:var(--max-width);
+	margin:0 auto;
+	display:block;
+	display:flex;
+	flex-wrap:wrap;
+	align-content:space-around;
+	padding:var(--half-line);
+}
+section div.row div{
 	flex: 1 0 calc(25% - var(--single-line));
-	padding:var(--single-line) 0px;
 	min-width:300px;
+	margin:var(--half-line);
 }
 figure{
 	max-width:100%;
@@ -457,8 +533,52 @@ figure figcaption{
 	display:block;
 	color:var(--primary-alt-colour);
 	font-style:italic;
-	line-height:var(--double-line);
+	margin:var(--single-line) 0;
 }
 /*
 	7. Menus
 */
+nav{
+	padding:var(--single-line);
+	width:100%;
+}
+nav.horizontal ul{
+	margin:0px;
+	width:100%;
+	max-width:100%;
+}
+nav.horizontal ul li::before{
+	content: '';
+}
+nav.horizontal ul li{
+	display:inline-block;
+}
+nav.horizontal ul li a{
+	margin-right:var(--single-line);
+}
+nav.horizontal ul li a.button{
+	margin-bottom:0px;
+}
+nav.horizontal ul li.push-right{
+	float:right;
+	margin-right:0px;
+}
+nav.horizontal ul li.push-right a{
+	margin-right:0px;
+	margin-left:var(--single-line);
+}
+nav.horizontal ul li a.button-padding{
+	line-height:var(--double-line);
+	margin-right:var(--single-line);
+}
+/*
+	8. Break Points
+*/
+@media screen and (max-width:768px){
+	ul{
+		margin-left:2em;
+	}
+	nav.horizontal ul{
+		display:none;
+	}
+}
