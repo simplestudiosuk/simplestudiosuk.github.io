@@ -224,6 +224,7 @@ em{
 table{
 	margin:calc(var(--double-line) - 1px) 0;
 	border:1px solid var(--primary-colour);
+	color:var(--primary-colour);
 }
 thead{
 	background:var(--primary-colour);
@@ -495,6 +496,9 @@ section.secondary a.button:hover{
 }
 section.secondary tr:nth-child(even){
 	background: var(--secondary-colour-alt);
+}
+section.light-neutral form fieldset legend{
+	background:var(--light-neutral);
 }
 section header{
 	width:100%;

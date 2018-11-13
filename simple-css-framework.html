@@ -22,7 +22,7 @@
 			font-family:monospace;
 			overflow:auto;
 		}
-		p span{
+		span.code{
 			border:1px solid #777;
 			border-radius:2px;
 			background:#fff;
@@ -49,7 +49,8 @@
 		<div class="row">
 			<div>
 				<img src="images/simplestudios.svg" alt="Simple Studios" class="logo" />
-				<p><strong>We're building a simple CSS framework. Here are some docs which explain how it works.</strong></p>
+				<p><strong>We're building a simple CSS framework. Below is some notes and sample code explaining how it work.</strong></p>
+				<p><a class="button primary" href="https://github.com/simplestudiosuk/simple-css-framework">View/Download at GitHub</a></p>
 			</div>
 		</div>
 	</section>
@@ -58,7 +59,9 @@
 			<div>
 				<h2>CSS Variables</h2>
 				<p>Setup your base styles using CSS variables. Choose your primary and secondary colours, a light neutral, alert colours and then define your default border radius and set some line heights for your typography.</p>
-				<p>You'll find these styles from line 89 in <span>simple-css-framework.css</span>. Change them to be whatever you want.</p>
+				<p>You'll find these styles from line 89 in <span class="code">simple-css-framework.css</span> - change them to be whatever you want.</p>
+				<h4>Support for IE11</h4>
+				<p>CSS variables are <strong>not supported</strong> by IE11 so if you want to ensure a good user experience for users still using IE11 you'll need to provide some additional styles. We are going to be working on a solution to this to try and make it easy to support older browsers. <em>Watch this space!</em></p>
 			</div>
 			<div>
 				<h3>Sample Code</h3>
@@ -96,7 +99,7 @@
 				<h4>Heading 4</h4>
 				<h5>Heading 5</h5>
 				<h6>Heading 6</h6>
-				<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Suspendisse leo erat, dapibus porta rutrum non, dictum ut quam. Maecenas eleifend sapien odio, vel condimentum ante porttitor in.</p>
+				<p>Lorem ipsum dolor <strong>sit amet,</strong> <a href="#">consectetur adipiscing elit</a>. Suspendisse leo erat, <em>dapibus porta rutrum non</em>, dictum ut quam. Maecenas eleifend sapien odio, vel condimentum ante porttitor in.</p>
 				<ul>
 					<li>List item</li>
 					<li>List item</li>
@@ -116,7 +119,7 @@
 &lt;h4&gt;Heading 4&lt;/h4&gt;
 &lt;h5&gt;Heading 5&lt;/h5&gt;
 &lt;h6&gt;Heading 6&lt;/h6&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href="#"&gt;consectetur adipiscing elit&lt;/a&gt;. Suspendisse leo erat, dapibus porta rutrum non, dictum ut quam. Maecenas eleifend sapien odio, vel condimentum ante porttitor in.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor &lt;strong&gt;sit amet,&lt;/strong&gt; &lt;a href="#"&gt;consectetur adipiscing elit&lt;/a&gt;. Suspendisse leo erat, &lt;em&gt;dapibus porta rutrum non&lt;/em&gt;, dictum ut quam. Maecenas eleifend sapien odio, vel condimentum ante porttitor in.&lt;/p&gt;
 &lt;ul&gt;
 	&lt;li&gt;List Item&lt;/li&gt;
 	&lt;li&gt;List Item&lt;/li&gt;
@@ -130,7 +133,102 @@
 			</div>
 		</div>
 	</section>
-	
+	<section>
+		<div class="row">
+			<div>
+				<h2>Buttons</h2>
+				<p><a class="button primary" href="#">Button Primary</a> <a class="button secondary" href="#">Button Secondary</a> <a class="button primary outline" href="#">Button Primary Outline</a> <a class="button secondary outline" href="#">Button Secondary Outline</a> <a class="button alert-success" href="#">Success</a> <a class="button alert-warning" href="#">Warning</a> <a class="button alert-error" href="#">Error</a> <a class="button disabled" href="#">Disabled</a></p>
+				<p>As well as the colour classes, <span class="code">primary</span>, <span class="code">secondary</span>, <span class="code">outline</span>, <span class="code">alert-success</span>, <span class="code">alert-warning</span>, <span class="code">alert-error</span> and <span class="code">disabled</span> you can also these to change the button size:</p>
+				<ul>
+					<li><span class="code">smaller</span></li>
+					<li><span class="code">smallest</span></li>
+					<li><span class="code">bigger</span></li>
+					<li><span class="code">biggest</span></li>
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</section>
+	<section class="light-neutral">
+		<div class="row">
+			<div>
+				<h2>Alerts</h2>
+				<p class="alert success">This is a success alert <span>&times;</span></p>
+				<p class="alert warning">This is a warning alert <span>&times;</span></p>
+				<p class="alert error">This is a error alert <span>&times;</span></p>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div>
+				<h2>Tables</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Item #</th>
+							<th>Item Name</th>
+							<th>Quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>123</td>
+							<td>Product Name</td>
+							<td class="align-right">2</td>
+						</tr>
+						<tr>
+							<td>124</td>
+							<td>Another Name</td>
+							<td class="align-right">4</td>
+						</tr>
+						<tr>
+							<td>125</td>
+							<td>Third Row</td>
+							<td class="align-right">8</td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</section>
+	<section class="light-neutral">
+		<div class="row">
+			<div>
+				<h2>Forms</h2>
+				<form>
+					<fieldset>
+						<legend>Form Name</legend>
+						<p class="alert success">This is a success alert <span>&times;</span></p>
+						<label for="input">Label Text <span>required</span></label>
+						<input type="text" id="input" name="text" placeholder="" />
+						<label for="email">Label Email</label>
+						<input type="email" id="email" name="text" placeholder="you@example.com" />
+						<label for="password">Label Password</label>
+						<input type="password" id="password" name="password" placeholder="" />
+						<label for="select">Label Select</label>
+						<select name="select" id="select">
+							<option>Option</option>
+						</select>
+						<label for="comment">Label Textarea</label>
+						<textarea id="comment" name="comment" rows="4" cols="30"></textarea>
+						<input type="submit" class="button" value="Submit" /><input type="reset" class="button alert-warning" value="Reset" /><a class="inline" href="#">Cancel</a>
+					</fieldset>
+				</form>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</section>
 	<section class="primary" id="more">
 		<div class="row">
 			<div>
