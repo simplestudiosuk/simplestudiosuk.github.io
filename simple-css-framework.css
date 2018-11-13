@@ -174,7 +174,9 @@ ul li::before{
 ol{
 	margin-bottom:var(--single-line);
 	list-style:none;
+	color: var(--primary-colour);
 	margin-left:4em;
+	max-width:56em;
 }
 ol li::before {
 	content: counter(li); 

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8" />
+	
+	<title>Simple Studios</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet"> 
+	<link href="simple-css-framework.css" rel="stylesheet" />
+	<style>
+		img.logo{
+			max-width:120px;
+			height:auto;
+			margin-bottom:var(--single-line);
+		}	
+		pre{
+			border:1px solid #777;
+			border-radius:var(--default-radius);
+			background:#fff;
+			box-shadow:0px 0px 5px #ccc;
+			color:#777;
+			padding:var(--single-line);
+			font-family:monospace;
+			overflow:auto;
+		}
+		p span{
+			border:1px solid #777;
+			border-radius:2px;
+			background:#fff;
+			color:#777;
+			padding:0px 3px;
+			font-family:monospace;
+		}
+	</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+	<section class="primary">
+		<header>
+			<nav class="horizontal">
+				<ul>
+					<li><a class="button secondary smaller" href="/">&larr; Home</a></li>
+					<li class="push-right"><a class="button secondary outline smaller" href="mailto:hello@simplestudios.co.uk?subject=Website Enquiry">Email Us</a></li>
+				</ul>
+			</nav>
+		</header>
+	</section>
+	<section class="secondary" id="about">
+		<div class="row">
+			<div>
+				<img src="images/simplestudios.svg" alt="Simple Studios" class="logo" />
+				<p><strong>We're building a simple CSS framework. Here are some docs which explain how it works.</strong></p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div>
+				<h2>CSS Variables</h2>
+				<p>Setup your base styles using CSS variables. Choose your primary and secondary colours, a light neutral, alert colours and then define your default border radius and set some line heights for your typography.</p>
+				<p>You'll find these styles from line 89 in <span>simple-css-framework.css</span>. Change them to be whatever you want.</p>
+			</div>
+			<div>
+				<h3>Sample Code</h3>
+				<pre>:root {
+	--main-bg-colour: #fff;
+	--primary-colour: #1f2d3d;
+	--primary-colour-alt: #353f4b;
+	--secondary-colour: #dc314b;
+	--secondary-colour-alt: #f15f63;
+	--light-neutral: #f1f2f2;
+	--alert-success: #75a000;
+	--alert-success-alt: #dfedb7;
+	--alert-error: #c10000;
+	--alert-error-alt: #ffcaca;
+	--alert-warning: #ddb300;
+	--alert-warning-alt: #fff0b0;
+	--default-radius: 8px;
+	--half-line: 0.7rem;
+	--single-line: 1.4rem;
+	--double-line: 2.8rem;
+	--triple-line: 4.2rem;
+	--max-width:1280px;
+}</pre>
+			</div>
+		</div>
+	</section>
+	<section class="light-neutral">
+		<div class="row">
+			<div>
+				<h2>Typography</h2>
+				<p>Simple CSS Framework includes the following base styles:</p>
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+				<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Suspendisse leo erat, dapibus porta rutrum non, dictum ut quam. Maecenas eleifend sapien odio, vel condimentum ante porttitor in.</p>
+				<ul>
+					<li>List item</li>
+					<li>List item</li>
+					<li>List item</li>
+				</ul>
+				<ol>
+					<li>List item</li>
+					<li>List item</li>
+					<li>List item</li>
+				</ol>
+			</div>
+			<div>
+				<h3>Sample Code</h3>
+				<pre>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href="#"&gt;consectetur adipiscing elit&lt;/a&gt;. Suspendisse leo erat, dapibus porta rutrum non, dictum ut quam. Maecenas eleifend sapien odio, vel condimentum ante porttitor in.&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+	&lt;li&gt;List Item&lt;/li&gt;
+&lt;/ol&gt;</pre>
+			</div>
+		</div>
+	</section>
+	
+	<section class="primary" id="more">
+		<div class="row">
+			<div>
+				<h4>About Us</h4>
+				<figure>
+					<img src="images/jack-esgrid.jpg" alt="Jack Barber and Esgrid Sikahall" />
+					<figcaption>Jack and Esgrid on Skiddaw in the Lake District</figcaption>
+				</figure>
+			</div>
+			<div>
+				<p class="margin-h4"><strong>Jack Barber</strong> has been a freelance website designer and developer for over 10 years. Based in Whitby, North Yorkshire, he's married to Megan and they have four children.</p>
+				<p>Originally from Guatemala, <strong>Esgrid Sikahall</strong> is married to Rachel and they live in Edinburgh. Esgrid splits his time between Simple Studios and working for his PhD at Edinburgh University.</p>
+			</div>
+			<div>
+				<h4>About This Site</h4>
+				<p>Simple Studios is a new venture for <a href="https://jackbarber.co.uk">Jack Barber Ltd</a>. We're <a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food" target="_blank">eating our own dog food</a> and building this website using our own CSS framework. As a result this site will always remain a work in progress; bits of it may be be unfinished or broken.</p>
+				<p>Our aim is to develop a design and development studio with a reputation for creating <strong>simple solutions for complex problems</strong>.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div>
+				<p>All content &copy; Jack Barber Ltd 2018</p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
